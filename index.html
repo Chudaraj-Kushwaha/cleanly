@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCleeny - Professional Cleaning Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">🌓</button>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home">
+                <span class="logo-go">Go</span>
+                <span class="logo-cleeny">Cleeny</span>
+            </a>
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#booking">Book Now</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Cleaning Services</h1>
+            <p>Experience the difference with GoCleeny's eco-friendly cleaning solutions</p>
+            <a href="#booking" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content animate-on-scroll">
+            <p>Founded in 2025, GoCleeny is proud to be a part of the SAMBIC Group. We are committed to delivering exceptional cleaning services while prioritizing eco-friendly solutions.</p>
+            <div class="about-grid">
+                <div class="feature-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide superior cleanliness without compromising the environment</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Our Values</h3>
+                    <p>Excellence, Sustainability, and Customer Satisfaction</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Our Promise</h3>
+                    <p>100% Satisfaction Guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+                <h3>Home Cleaning</h3>
+                <p class="service-price">From £15/hr</p>
+                <ul>
+                    <li>Deep Cleaning</li>
+                    <li>Regular Maintenance</li>
+                    <li>Window Cleaning</li>
+                    <li>Carpet Cleaning</li>
+                </ul>
+                <a href="#booking" class="cta-button">Book Now</a>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <h3>Office Cleaning</h3>
+                <p class="service-price">From £20/hr</p>
+                <ul>
+                    <li>Daily Cleaning</li>
+                    <li>Floor Maintenance</li>
+                    <li>Sanitization</li>
+                    <li>Waste Management</li>
+                </ul>
+                <a href="#booking" class="cta-button">Book Now</a>
+            </div>
+            <div class="service-card animate-on-scroll">
+                <h3>End of Tenancy</h3>
+                <p class="service-price">From £25/hr</p>
+                <ul>
+                    <li>Deep Cleaning</li>
+                    <li>Carpet Cleaning</li>
+                    <li>Wall Cleaning</li>
+                    <li>Appliance Cleaning</li>
+                </ul>
+                <a href="#booking" class="cta-button">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="section">
+        <h2 class="section-title">Join Our Team</h2>
+        <div class="careers-grid">
+            <div class="career-card animate-on-scroll">
+                <h3>Professional Cleaners</h3>
+                <p>Join our growing family of cleaning experts</p>
+                <form class="form-container">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input" required>
+                            <option value="">Experience Level</option>
+                            <option value="entry">Entry Level</option>
+                            <option value="experienced">Experienced</option>
+                            <option value="senior">Senior</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit">Apply Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section">
+        <h2 class="section-title">Book a Service</h2>
+        <form id="booking-form" class="form-container">
+            <div class="form-group">
+                <select id="service" class="form-input" required>
+                    <option value="">Select Service</option>
+                    <option value="home">Home Cleaning</option>
+                    <option value="office">Office Cleaning</option>
+                    <option value="tenancy">End of Tenancy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="hours" class="form-input" placeholder="Number of Hours" min="2" required>
+            </div>
+            <div class="form-group">
+                <p>Total Price: <span id="total-price">£0</span></p>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-input" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-input" placeholder="Special Instructions" rows="4"></textarea>
+            </div>
+            <button type="submit" class="form-submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-info">
+            <p>We'd love to hear from you. Get in touch for personalized cleaning solutions.</p>
+        </div>
+        <div class="contact-methods">
+            <div class="contact-method animate-on-scroll">
+                <h3>Email</h3>
+                <p>info@gocleeny.co.uk</p>
+            </div>
+            <div class="contact-method animate-on-scroll">
+                <h3>Phone</h3>
+                <p>+44 20 1234 5678</p>
+            </div>
+            <div class="contact-method animate-on-scroll">
+                <h3>Address</h3>
+                <p>London, United Kingdom</p>
+            </div>
+        </div>
+        <form class="form-container">
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-input" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-input" placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GoCleeny</h3>
+                <p>A Part of SAMBIC Group</p>
+                <p>Professional Cleaning Services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@gocleeny.co.uk</p>
+                <p>Website: www.gocleeny.co.uk</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GoCleeny Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
